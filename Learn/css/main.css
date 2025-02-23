@@ -1,0 +1,28 @@
+h1 {
+    --my-color: green;
+    color: var(--my-color);
+    font-size: 40px;
+}
+h2 {
+    color:var(--text-color);
+}
+/* #id1{
+    color: blue;
+}
+.class1.class2{
+    color: green;
+}
+
+.class1{
+    color: yellow;
+} */
+
+:root {
+    --text-color: red;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
