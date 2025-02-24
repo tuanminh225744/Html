@@ -132,6 +132,44 @@
                 box-sizing: border-box;
             }
 
+            h1{
+                position: relative;
+                left: 100px;
+            }
+
+            .box30{
+                width: 100px;
+                height: 100px;
+                background-color: #333;
+                position: relative;
+            }
+
+            .box31{
+                
+                background-color: rgba(255,255,255,0.5);
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+            }
+
+            .header3{
+                width: 100%;
+                height: 30px;
+                background-color: #333;
+                position: fixed;
+                bottom: 0;
+            }
+
+            .header4{
+                width: 100%;
+                height: 30px;
+                background-color: #333;
+                position: sticky;
+                top: 0;
+            }
+
         </style>
     </head>
     <!-- phan than -->
@@ -150,7 +188,7 @@
         <div class="header2">
 
         </div>
-
+        <!-- <div class="header4"></div> -->
 
         <div>
             <!--
@@ -327,8 +365,23 @@
 
 
         <div>
+            <!--
+                position    tao khung chuc nang
+                + relative: vi tri tuong doi (lay minh lam goc toa do)
+                + absolute: vi tri tuyet doi (lay the cha gan nhat lam goc toa do)
+                + fixed: vi tri phu thuoc vao cua so
+                + sticky: vi tri bam dinh (khong chay tren nhieu trinh duyet)
+            -->
+            <div class="box30">
+                hello
+                <div class="box31"></div>
+            </div>
+            <div class="header3"></div>
             
         </div>
+
+
+    
 
 
 
