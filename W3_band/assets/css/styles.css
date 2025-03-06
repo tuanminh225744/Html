@@ -37,7 +37,7 @@
 }
 
 .col-third{
-    width: 33.33333%;
+    width: 33.33333% ;
 }
 
 .col-half{
@@ -81,7 +81,6 @@ html{
     position: fixed;
     top: 0;
     z-index: 1;
-    overflow: hidden;
 }
 
 #nav {
@@ -300,7 +299,7 @@ html{
 }
 
 .place-list{
-    margin-top: 32px;
+    margin-top: 16px;
     
 }
 

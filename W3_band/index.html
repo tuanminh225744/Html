@@ -62,15 +62,15 @@
                     adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
                 <div class="member-list">
-                    <div class="member-item">
+                    <div class="member-item mobile-member-item">
                         <p class="member-name">name</p>
                         <img src="https://www.w3schools.com/w3images/bandmember.jpg" class="member-img">
                     </div>
-                    <div class="member-item">
+                    <div class="member-item mobile-member-item">
                         <p class="member-name">name</p>
                         <img src="https://www.w3schools.com/w3images/bandmember.jpg" class="member-img">
                     </div>
-                    <div class="member-item">
+                    <div class="member-item mobile-member-item">
                         <p class="member-name">name</p>
                         <img src="https://www.w3schools.com/w3images/bandmember.jpg" class="member-img">
                     </div>
@@ -90,31 +90,31 @@
                     </ul>
                     <!--place-->
                     <div class="place-list row">
-                        <div class="col-third col">
+                        <div class="col-third col mt-16 s-col-full">
                             <img class="place-img" src="./assets/img/tour-img/newyork.jpg">
                             <div class="place-body">
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="btn js-buy-tickets">Buy Tickets</button>
+                                <button class="btn js-buy-tickets s-full-width">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="col-third col">
+                        <div class="col-third col mt-16 s-col-full">
                             <img class="place-img" src="./assets/img/tour-img/paris.jpg">
                             <div class="place-body">
                                 <h3 class="place-heading">Paris</h3>
                                 <p class="place-time">Sat 28 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="btn js-buy-tickets">Buy Tickets</button>
+                                <button class="btn js-buy-tickets s-full-width">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="col-third col">
+                        <div class="col-third col mt-16 s-col-full">
                             <img class="place-img" src="./assets/img/tour-img/sanfran.jpg">
                             <div class="place-body">
                                 <h3 class="place-heading">San Francisco</h3>
                                 <p class="place-time">Sun 29 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="btn js-buy-tickets">Buy Tickets</button>
+                                <button class="btn js-buy-tickets s-full-width">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="clear"></div>
@@ -128,7 +128,7 @@
                 <h2 class="section-heading">CONTACT</h2>
                 <p class="section-sub_heading">Fan? Drop a note!</p>
                 <div class="row contact-content">
-                    <div class="col col-half contact-info">
+                    <div class="col col-half contact-info s-col-full">
                         <p>
                             <i class="ti-location-pin"></i>
                             Chicago, US
@@ -143,22 +143,22 @@
                         </p>
                     </div>
 
-                    <div class="col col-half contact-form">
+                    <div class="col col-half s-col-full">
                         <form action="">
                             <div class="row">
-                                <div class="col col-half">
+                                <div class="col col-half contact-form s-col-full s-mt-32">
                                     <input type="text" placeholder="Name" required class="form-control">
                                 </div>
-                                <div class="col col-half">
+                                <div class="col col-half contact-form s-col-full s-mt-8">
                                     <input type="email" placeholder="Email" required class="form-control">
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col col-full mt-8">
+                                <div class="col col-full mt-8 contact-form ">
                                     <input type="text" placeholder="Message" required class="form-control">
                                 </div>
                             </div>
-                            <input type="submit" value="SEND" class="mt-16 btn pull-right">
+                            <input type="submit" value="SEND" class="mt-16 btn pull-right s-full-width">
                         </form>
                     </div>
                 </div>
@@ -264,11 +264,18 @@
 
         // tudong dong khi an 1 nut
         var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        
 
         for(var i=0;i<menuItems.length;i++){
             var menuItem=menuItems[i];
-            menuItem.onclick = function(){
-                header.style.height = null;
+            
+            menuItem.onclick = function(event){
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                if(!isParentMenu){
+                    header.style.height = null;
+                }else{
+                    event.preventDefault();
+                }
             }
         }
     </script>
